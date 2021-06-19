@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <table>
+                    <tr><td>Id</td><td>Nombre</td><td>Apellidos</td></tr>
+                    <tbody id="contenido"></tbody>
+                </table>
+            </td>
+            <td>
+                <form action="" method="post" id="formularioR">
+                    <input type="text" name="txtNombre" id="txtNombre" placeholder="Nombre Usuario">
+                    <input type="text" name="txtApellidos" id="txtApellidos" placeholder="Apellidos Usuario">
+                    <input type="submit" value="Registrar Usuario" name="btnRegistrar">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="" method="post" id="formEliminar">
+                    <label for="nomUsuarios">Seleccione Id de usuario a eliminar</label>
+                    <br><select class="form-control" name="IdUsuarios" id="IdUsuarios">
+                    </select>
+                    <br><button class="btn btn-danger" name="btnEliminarU" id="btnEliminarU">Eliminar Usuario</button>
+                </form>
+            </td>
+            <td>
+
+            </td>
+        </tr>
+    </table>
+
+
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyB4HGWvy3f--qEnfirbgmuhYqND-n8N9RM",
+        authDomain: "fir-crud-1eada.firebaseapp.com",
+        projectId: "fir-crud-1eada",
+        storageBucket: "fir-crud-1eada.appspot.com",
+        messagingSenderId: "964379232827",
+        appId: "1:964379232827:web:95d860df582c23dc44aa1e"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="crudFirebase.js"></script>
+</body>
+</html>
